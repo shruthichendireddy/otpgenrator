@@ -1,0 +1,32 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>OTP GENERATOR</h1>
+        <p id="cd1" style="font-size:30px">Generated OTP</p>
+        <button id="btn1">click here to generate OTP</button>
+        <a href="./otp generator_dom.html"><button style="background-color: antiquewhite;margin:10px;">Reset</button></a>
+    </div>
+    <script>
+        let getm1=document.getElementsByClassName("main")[0];
+        let getbtn=document.getElementById("btn1");
+        getbtn.addEventListener("click",()=>{
+            let getcd1=document.getElementById("cd1");
+            let res=""
+            for(let i=0;i<4;i++){
+                res+=Math.floor(Math.random()*9);
+            }
+            getcd1.innerHTML=res;
+        })
+        getbtn.setAttribute("style","background-color:pink");
+    </script>
+    
+</body>
+</html>
+    
